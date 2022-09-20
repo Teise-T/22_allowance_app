@@ -2,11 +2,11 @@
 # which are needed
 from tkinter import *
 from tkinter.ttk import *
-
+from PIL import ImageTk, Image
 # creating tkinter window
 root = Tk()
 
-# Creating a photoimage object to use image
+# Creating a photoImage object to use image
 nikaupho = PhotoImage(file=r"jellyfish.png")
 hanapho = PhotoImage(file=r"fox.png")
 tiapho = PhotoImage(file=r"whale.png")
