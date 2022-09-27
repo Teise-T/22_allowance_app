@@ -4,28 +4,35 @@ from tkinter import ttk
 from matplotlib import font_manager
 
 from PIL import Image, ImageTk
+
 font_manager.findSystemFonts(fontpaths=None, fontext="ttf")
 
 
+# Allowance class
 class AllowanceGUI:
     def __init__(self):
         root = Tk()
         root.geometry("350x500")
 
+        # puts image in the corner of the page
         self.logo = PhotoImage(file=r"growth.png")
         self.logo = self.logo.subsample(7, 7)
-
         root.iconphoto(False, self.logo)
 
+        # adding style to elements on the GUI
         self.style = ttk.Style()
         self.style.configure('allowance', background="#f9f9f9ff")
         self.style.configure('frame1', background="#f9f9f9ff")
         self.style.configure('frame1_header', )
 
+        # Frame 1, encompasses the entire page
         self.frame1 = ttk.Frame(root)
+        # A separate frame for tFhe logo
         self.frame1_logo = ttk.Label(self.frame1, image=self.logo)
+        # A separate frame for the header
         self.frame1_header = ttk.Label(self.frame1, text="Ranui Moni", font=('Comfortaa', 20))
         self.label2 = ttk.Label(self.frame1)
+        # A separate frame for the help icon
 
         self.frame1.grid(column=2, row=2, sticky="NSEW")
         self.frame1_logo.grid(column=1, row=0, pady=5, padx=(350 / 2 - 40), sticky="NSEW")
