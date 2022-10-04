@@ -1,9 +1,8 @@
-from tkinter import *
-from tkinter import ttk
-# from tkinter import tkinter.font
-from matplotlib import font_manager
+    from tkinter import *
+    from tkinter import ttk
+    # from tkinter import tkinter.font
+    from matplotlib import font_manager
 
-from PIL import Image, ImageTk
 
 font_manager.findSystemFonts(fontpaths=None, fontext="ttf")
 
@@ -19,6 +18,11 @@ class AllowanceGUI:
         self.logo = self.logo.subsample(7, 7)
         root.iconphoto(False, self.logo)
 
+        # makes help icon show up on GUI
+        self.help = PhotoImage(file=r"help (1).png")
+        self.help = self.help.subsample(2, 2)
+        root.helpphoto(False, self.help)
+
         # adding style to elements on the GUI
         self.style = ttk.Style()
         self.style.configure('allowance', background="#f9f9f9ff")
@@ -33,7 +37,7 @@ class AllowanceGUI:
         self.frame1_header = ttk.Label(self.frame1, text="Ranui Moni", font=('Comfortaa', 20))
         self.label2 = ttk.Label(self.frame1)
         # A separate frame for the help icon
-
+        self.frame1_help =
         self.frame1.grid(column=2, row=2, sticky="NSEW")
         self.frame1_logo.grid(column=1, row=0, pady=5, padx=(350 / 2 - 40), sticky="NSEW")
         self.frame1_header.grid(column=1, row=1, pady=0, padx=(350 / 2 - 80), sticky="NSEW")
