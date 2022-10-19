@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-# from tkinter import tkinter.font
+# embeds font into the code for use
 from matplotlib import font_manager
 
 
@@ -21,7 +21,7 @@ class AllowanceGUI:
         # makes help icon show up on GUI
         self.help = PhotoImage(file=r"help (1).png")
         self.help = self.help.subsample(2, 2)
-        # root.helpphoto(False, self.help)
+        #
 
         # adding style to elements on the GUI
         self.style = ttk.Style()
