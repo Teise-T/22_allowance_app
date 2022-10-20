@@ -29,7 +29,6 @@ class HelpGUI:
         # Frame for greyed out instruction/info text
         self.frame1_helpinfo = ttk.Frame(root)
 
-
         # adding style to elements on the GUI
         self.style = ttk.Style()
         self.style.configure('allowance', background="#f9f9f9ff")
@@ -38,7 +37,7 @@ class HelpGUI:
         self.style.configure('frame1_helpInfo', background="#e4e4e4ff")
 
         # specific placing for element via grid
-        self.frame1_helpinfo.grid(column=1, row=3, pady=3, padx=(width / 2-60))
+        self.frame1_helpinfo.grid(column=1, row=3, pady=3, padx=(width / 2 - 60))
         self.frame1_help.grid(column=2, row=2, sticky="NSEW")
         self.frame1_logo.grid(column=1, row=0, pady=5, padx=(width / 2 - 40), sticky="NSEW")
 
@@ -48,3 +47,6 @@ class HelpGUI:
 
 
 HelpGUI()
+
+
+
