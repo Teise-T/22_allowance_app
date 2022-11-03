@@ -58,42 +58,9 @@ class AllowanceGUI:
         tiapho = PhotoImage(file=r"whale.png")
 
         # Resizing image to fit on button
-        nikaupho = nikaupho.subsample(4, 4)
-        hanapho = hanapho.subsample(4, 4)
-        tiapho = tiapho.subsample(4, 4)
-
-    def openNewWindow():
-        # Toplevel object which will
-        # be treated as a new window
-        newWindow = Toplevel(root)
-
-        # sets the title of the
-        # Toplevel widget
-        newWindow.title("New Window")
-
-        # sets the geometry of toplevel
-        newWindow.geometry("200x200")
-
-        # A Label widget to show in toplevel
-        Label(newWindow,
-              text="This is a new window").pack()
-
-    label = ttk.Label(root,
-                  text="This is the main window")
-
-    label.pack(pady=10)
-    # This function enables the button to take the user to another page e.g help page
-    def Nikau(event, frame2=None):
-        # here, image option is used to
-        # set image on button
-        # compound option is used to align
-        # image on LEFT side of button
-        # buttonss for each child: Nikau, Tia and Hana
-        Button(frame2, text='Nikau', image=nikaupho, compound=LEFT, width=(app_width - 20)).grid(column=0,
-                                                                                                 row=2)
-
-        Button(frame2, text='Hana', image=hanapho, compound=LEFT, width=(app_width - 20)).grid(column=0, row=3)
-        Button(frame2, text='Tia', image=tiapho, compound=LEFT, width=(app_width - 20)).grid(column=0, row=4)
+        nikaupho.subsample(4, 4)
+        hanapho.subsample(4, 4)
+        tiapho.subsample(4, 4)
 
         root.title("Allowance app")
         root.configure()
